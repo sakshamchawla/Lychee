@@ -33,7 +33,7 @@ Route::post('/Albums::tree', [AlbumsController::class, 'tree']);
 Route::post('/Album::get', [AlbumController::class, 'get']);
 Route::post('/Album::getPositionData', [AlbumController::class, 'getPositionData']);
 Route::post('/Album::unlock', [AlbumController::class, 'unlock']);
-Route::post('/Album::add', [AlbumController::class, 'add']);
+// Route::post('/Album::add', [AlbumController::class, 'add']);
 Route::post('/Album::addByTags', [AlbumController::class, 'addTagAlbum']);
 Route::post('/Album::setTitle', [AlbumController::class, 'setTitle']);
 Route::post('/Album::setNSFW', [AlbumController::class, 'setNSFW']);
@@ -41,7 +41,7 @@ Route::post('/Album::setDescription', [AlbumController::class, 'setDescription']
 Route::post('/Album::setCover', [AlbumController::class, 'setCover']);
 Route::post('/Album::setShowTags', [AlbumController::class, 'setShowTags']);
 Route::post('/Album::setProtectionPolicy', [AlbumController::class, 'setProtectionPolicy']);
-Route::post('/Album::delete', [AlbumController::class, 'delete']);
+# Route::post('/Album::delete', [AlbumController::class, 'delete']);
 Route::post('/Album::merge', [AlbumController::class, 'merge']);
 Route::post('/Album::move', [AlbumController::class, 'move']);
 Route::post('/Album::setLicense', [AlbumController::class, 'setLicense']);
@@ -52,7 +52,7 @@ Route::get('/Album::getArchive', [AlbumController::class, 'getArchive'])
 Route::post('/Album::setTrack', [AlbumController::class, 'setTrack'])
 	->withoutMiddleware(['content_type:json'])
 	->middleware(['content_type:multipart']);
-Route::post('/Album::deleteTrack', [AlbumController::class, 'deleteTrack']);
+# Route::post('/Album::deleteTrack', [AlbumController::class, 'deleteTrack']);
 
 /**
  * IMPORT.
@@ -77,7 +77,7 @@ Route::post('/Photo::setStar', [PhotoController::class, 'setStar']);
 Route::post('/Photo::setPublic', [PhotoController::class, 'setPublic']);
 Route::post('/Photo::setAlbum', [PhotoController::class, 'setAlbum']);
 Route::post('/Photo::setTags', [PhotoController::class, 'setTags']);
-Route::post('/Photo::delete', [PhotoController::class, 'delete']);
+# Route::post('/Photo::delete', [PhotoController::class, 'delete']);
 Route::post('/Photo::duplicate', [PhotoController::class, 'duplicate']);
 Route::post('/Photo::setLicense', [PhotoController::class, 'setLicense']);
 Route::post('/Photo::setUploadDate', [PhotoController::class, 'setUploadDate']);
@@ -116,7 +116,7 @@ Route::post('/User::unsetToken', [Administration\UserController::class, 'unsetTo
  */
 Route::post('/Users::list', [Administration\UsersController::class, 'list']);
 Route::post('/Users::save', [Administration\UsersController::class, 'save']);
-Route::post('/Users::delete', [Administration\UsersController::class, 'delete']);
+// Route::post('/Users::delete', [Administration\UsersController::class, 'delete']);
 Route::post('/Users::create', [Administration\UsersController::class, 'create']);
 
 /**
@@ -139,7 +139,7 @@ Route::post('/WebAuthn::login', [WebAuthn\WebAuthnLoginController::class, 'login
 Route::post('/Sharing::list', [Administration\SharingController::class, 'list']);
 Route::post('/Sharing::add', [Administration\SharingController::class, 'add']);
 Route::post('/Sharing::setByAlbum', [Administration\SharingController::class, 'setByAlbum']);
-Route::post('/Sharing::delete', [Administration\SharingController::class, 'delete']);
+# Route::post('/Sharing::delete', [Administration\SharingController::class, 'delete']);
 
 /**
  * DIAGNOSTICS.
